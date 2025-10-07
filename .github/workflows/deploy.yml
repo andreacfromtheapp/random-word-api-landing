@@ -1,11 +1,11 @@
-name: Build
+name: Build and Deploy to Netlify
 
 on:
   push:
     branches: [ main ]
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     
     steps:
@@ -16,16 +16,21 @@ jobs:
       with:
         targets: wasm32-unknown-unknown
     
-    - name: Install Trunk
+    - name: Cache Rust dependencies
+      uses: Swatinem/rust-cache@v2
+    
+    - name: Install trunk
       run: cargo install trunk
     
     - name: Build
       run: trunk build --release
+      env:
+        API_URL: ${{ secrets.API_URL }}
     
-    - name: Commit dist
+    - name: Deploy to Netlify
       run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git add dist/
-        git diff --staged --quiet || git commit -m "Update build artifacts"
-        git push
+        npm install -g netlify-cli
+        netlify deploy --prod --dir=dist
+      env:
+        NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
