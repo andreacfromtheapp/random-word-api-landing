@@ -4,7 +4,7 @@ use std::fmt;
 pub const REPO_URL: &str = "https://github.com/andreacfromtheapp/random-word-api";
 
 pub fn api_url() -> String {
-    std::env::var("API_URL").unwrap_or_else(|_| "http://localhost:3000".to_string())
+    env!("API_URL").to_string()
 }
 
 #[derive(Debug, Clone, Copy, PartialEq)]

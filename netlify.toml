@@ -1,5 +1,9 @@
 [build]
+  command = "cargo install trunk && trunk build --release"
   publish = "dist"
+
+[build.environment]
+  RUST_VERSION = "1.70"
 
 [[redirects]]
   from = "/*"
