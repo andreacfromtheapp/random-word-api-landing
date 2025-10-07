@@ -155,6 +155,10 @@ fn Landing() -> impl IntoView {
 
             <div class="mt-2">
                 <h2 class="text-lg font-semibold md:text-xl">"API Documentation"</h2>
+                <div role="alert" class="my-2 alert alert-error alert-soft">
+                    <Icon icon=i::FaCircleExclamationSolid />
+                    <span>"This only works locally and with docker compose"</span>
+                </div>
                 <p>
                     <a
                         href="https://www.openapis.org"
@@ -289,11 +293,8 @@ fn Demo() -> impl IntoView {
                         }
                         (None, None) => {
                             view! {
-                                <div role="alert" class="my-2 alert alert-error alert-soft">
-                                    <Icon icon=i::FaCircleExclamationSolid />
-                                    <span>
-                                        "EPIC FAIL: this should NOT have happened.... d'oh!!!"
-                                    </span>
+                                <div>
+                                    <span class="loading loading-spinner loading-xl"></span>
                                 </div>
                             }
                                 .into_any()
