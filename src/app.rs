@@ -115,9 +115,18 @@ fn Landing() -> impl IntoView {
                 </p>
                 <h2 class="mt-2 text-lg font-semibold md:text-xl">"A Note"</h2>
                 <p>
-                    "Don't be deceived by the minimalism of the API. Keeping the
-                    model simple by design, while fulfilling all app's requirements, allowed for a
-                    broader learning scope. Try out the demo below and, if more technically inclined, browse the fullstack code on the "
+                    "Don't be deceived by the minimalism of the API. The
+                    model is simple by design. It fulfills all app's requirements, and it allowed for a
+                    broader learning scope. Try the demo below or play with "
+                    <a
+                        href="https://speak-and-spell.netlify.app/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="link link-primary"
+                    >
+                        "Speak and Spell"
+                    </a>
+                    " for a more fun approach 😊. If technically inclined, browse the fullstack code on the "
                     <a
                         href="https://github.com/andreacfromtheapp/random-word-api"
                         target="_blank"
@@ -126,7 +135,7 @@ fn Landing() -> impl IntoView {
                     >
                         "Random Word API"
                     </a>
-                    " repository. I hope you like it as much as I loved learning with this project! ❤️🦀"
+                    " repository. A Dockerized version is available on the repository as well. I hope you like it as much as I loved learning with this project! ❤️🦀"
                 </p>
             </div>
 
