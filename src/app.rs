@@ -143,11 +143,15 @@ fn Landing() -> impl IntoView {
                 <h2 class="text-lg font-semibold md:text-xl">"The Demo"</h2>
                 <div role="alert" class="my-2 alert alert-info alert-soft">
                     <Icon icon=i::FaCircleExclamationSolid />
-                    <span class="text-base md:text-lg">
-                        "Only English currently implemented, however,
-                         the codebase is future-proof. Ready to accommodate more languages and grammatical types.
-                         It would only need the corresponding database tables, data entry, and minor code changes."
+                    <span>
+                        "The free tier shuts the service down after some time of inactivity. You may experience a loading spinner."
                     </span>
+                </div>
+                <div>
+                    <p class="text-base md:text-lg">
+                        "Only English is currently implemented, however, the codebase is future-proof. Ready to accommodate more languages and grammatical types
+                        as needed. It would only require the additional corresponding database tables, data entry, and minor code changes."
+                    </p>
                 </div>
 
                 <Demo />
@@ -155,9 +159,11 @@ fn Landing() -> impl IntoView {
 
             <div class="mt-2">
                 <h2 class="text-lg font-semibold md:text-xl">"API Documentation"</h2>
-                <div role="alert" class="my-2 alert alert-error alert-soft">
+                <div role="alert" class="my-2 alert alert-info alert-soft">
                     <Icon icon=i::FaCircleExclamationSolid />
-                    <span>"This only works locally and with docker compose"</span>
+                    <span>
+                        "This only works locally and with docker compose. Visit the repository for a step by step guide."
+                    </span>
                 </div>
                 <p>
                     <a
@@ -264,7 +270,7 @@ fn Demo() -> impl IntoView {
 
     view! {
         <div class="flex flex-col" aria-label="main area to display a random word">
-            <div class="justify-items-start p-4 m-auto w-full border-2 bg-base-200 border-base-300">
+            <div class="justify-items-start p-4 m-auto mt-2 w-full border-2 bg-base-200 border-base-300">
                 {move || {
                     match (error.get(), word_data.get()) {
                         (Some(err), _) => {
