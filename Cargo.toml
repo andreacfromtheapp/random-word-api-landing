@@ -1,17 +1,28 @@
 [package]
 name = "fe-leptos-landingpage"
 version = "0.1.0"
-edition.workspace = true
-license.workspace = true
-rust-version.workspace = true
-authors.workspace = true
-repository.workspace = true
-keywords.workspace = true
-homepage.workspace = true
+edition = "2021"
+license = "Apache-2.0"
+rust-version = "1.88"
+authors = ["Andrea C"]
+repository = "http://github.com/andreacfromtheapp/random-word-api-landing"
+keywords = [
+  "dictionary",
+  "words",
+  "random",
+  "restful",
+  "restful api",
+  "rest",
+  "rest api",
+  "api",
+  "axum",
+  "leptos",
+]
+homepage = "https://word-api-axum.netlify.app"
 description = "A simple Leptos landing page"
 
 [dependencies]
-serde = { workspace = true }
+serde = { version = "1.0.228", features = ["derive"] }
 leptos = { version = "0.8", features = ["csr"] }
 leptos_icons = { version = "0.7.0", features = [] }
 icondata = { version = "0.6.0", default-features = false, features = [
