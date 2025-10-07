@@ -4,7 +4,7 @@ use std::fmt;
 pub const REPO_URL: &str = "https://github.com/andreacfromtheapp/random-word-api";
 
 pub fn api_url() -> String {
-    dotenvy::var("API_URL").unwrap_or_else(|_| "http://localhost:3000".to_string())
+    std::env::var("API_URL").unwrap_or_else(|_| "http://localhost:3000".to_string())
 }
 
 #[derive(Debug, Clone, Copy, PartialEq)]
