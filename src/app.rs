@@ -141,10 +141,10 @@ fn Landing() -> impl IntoView {
 
             <div class="py-2">
                 <h2 class="text-lg font-semibold md:text-xl">"The Demo"</h2>
-                <div role="alert" class="my-2 alert alert-info alert-soft">
+                <div role="alert" class="my-2 text-base md:text-lg alert alert-info alert-soft">
                     <Icon icon=i::FaCircleExclamationSolid />
                     <span>
-                        "The free tier shuts the service down after some time of inactivity. You may experience a loading spinner."
+                        "The free tier shuts down after some time of inactivity or stop serving entirely if quota is reached. You may experience slow loading times or no demo at all."
                     </span>
                 </div>
                 <div>
@@ -159,10 +159,11 @@ fn Landing() -> impl IntoView {
 
             <div class="mt-2">
                 <h2 class="text-lg font-semibold md:text-xl">"API Documentation"</h2>
-                <div role="alert" class="my-2 alert alert-info alert-soft">
+                <div role="alert" class="my-2 text-base md:text-lg alert alert-info alert-soft">
                     <Icon icon=i::FaCircleExclamationSolid />
                     <span>
-                        "This only works locally and with docker compose. Visit the repository for a step by step guide."
+                        "These endpoints only work when running the backend locally or with docker compose. Visit the repository for instructions.
+                        With a production deployment, under normal circumnstances, they'd be served behind a reverse proxy."
                     </span>
                 </div>
                 <p>
