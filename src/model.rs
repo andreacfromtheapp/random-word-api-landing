@@ -7,6 +7,10 @@ pub fn api_url() -> String {
     env!("API_URL").to_string()
 }
 
+pub fn sps_url() -> String {
+    env!("SPS_URL").to_string()
+}
+
 #[derive(Debug, Clone, Copy, PartialEq)]
 pub enum GrammaticalType {
     Random,

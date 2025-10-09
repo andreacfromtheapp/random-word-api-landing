@@ -119,9 +119,9 @@ fn Landing() -> impl IntoView {
                     model is simple by design. It fulfills all app's requirements, and it allowed for a
                     broader learning scope. Try the demo below or play with "
                     <a
-                        href="https://speak-and-spell.netlify.app/"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        href=sps_url()
+                        target=move || (sps_url() != "/play").then_some("_blank")
+                        rel=move || (sps_url() != "/play").then_some("noopener noreferrer")
                         class="link link-primary"
                     >
                         "Speak and Spell"
