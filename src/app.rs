@@ -144,13 +144,14 @@ fn Landing() -> impl IntoView {
                 <div role="alert" class="my-2 text-base md:text-lg alert alert-info alert-soft">
                     <Icon icon=i::FaCircleExclamationSolid />
                     <span>
-                        "The free tier shuts down after some time of inactivity or stop serving entirely if quota is reached. You may experience slow loading times or no demo at all."
+                        "The free tier shuts down after some time of inactivity or stop serving entirely if quota is reached. You may experience slow loading times or no demo at all.
+                        In the latter case, you could run this demo in Docker. Visit the repository for instructions."
                     </span>
                 </div>
                 <div>
                     <p class="text-base md:text-lg">
                         "Only English is currently implemented, however, the codebase is future-proof. Ready to accommodate more languages and grammatical types
-                        as needed. It would only require the additional corresponding database tables, data entry, and minor code changes."
+                        as needed. It would only require the additional corresponding database tables, data entry, and minor additional code."
                     </p>
                 </div>
 
