@@ -37,7 +37,10 @@ fn Navbar() -> impl IntoView {
                 </a>
             </div>
             <div class="flex-none">
-                <label class="toggle text-base-content">
+                <label
+                    class="toggle text-base-content"
+                    aria-label="theme toggle between light and dark"
+                >
                     <input type="checkbox" value="dark" class="theme-controller" />
                     <Icon icon=i::FaSunSolid />
                     <Icon icon=i::FaMoonSolid />
@@ -95,7 +98,15 @@ fn Landing() -> impl IntoView {
                         class="link link-primary"
                     >
                         "comprehensive learning experience"
-                    </a> ". Landing page made with "
+                    </a> ". "
+                    <a
+                        href="https://github.com/andreacfromtheapp/random-word-api-landing"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="link link-primary"
+                    >
+                        "Landing page"
+                    </a> " made with "
                     <a
                         href="https://leptos.dev"
                         target="_blank"
