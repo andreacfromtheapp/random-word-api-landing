@@ -1,2 +1,3 @@
-# random-word-api-landing
-landing page for my random word api demo
+# Random Word API Landing
+
+Landing page for my random word API demo
